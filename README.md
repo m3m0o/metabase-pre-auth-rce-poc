@@ -4,13 +4,13 @@ This is a script written in Python that allows the exploitation of the **Metabas
 
 ## Usage
 
-The script needs the **target URL**, the **setup token** and a **payload** that will be executed. The setup token can be obtained through the ```/api/session/properties``` endpoint. Copy the value of the ```setup-token``` key.
+The script needs the **target URL**, the **setup token** and a **command** that will be executed. The setup token can be obtained through the ```/api/session/properties``` endpoint. Copy the value of the ```setup-token``` key.
 
 ![setup-token value](https://i.ibb.co/N22FgN6/setup-token.png)
 
-The **payload** will be executed on the target machine with the intention of obtaining a **reverse shell**. You can find different options in [RevShells](https://revshells.com). Having the **setup-token** value and the **payload** that will be executed, you can run the script with the following command:
+The **command** will be executed on the target machine with the intention of obtaining a **reverse shell**. You can find different options in [RevShells](https://revshells.com). Having the **setup-token** value and the **command** that will be executed, you can run the script with the following command:
 
-```python3 main.py -u http://[targeturl] -t [setup-token] -p "[payload]"```
+```python3 main.py -u http://[targeturl] -t [setup-token] -c "[command]"```
 
 ![script demo](https://iili.io/J2pd3Pe.gif)
 
