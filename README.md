@@ -1,6 +1,6 @@
 # Metabase Pre-Auth RCE (CVE-2023-38646) POC
 
-This is a script written in Python that allows the exploitation of the **Metabase's** software security flaw in the described in **CVE 2023-38646.** The system is vulnerable in versions preceding **0.46.6.1**, in the open-source edition, and preceding **1.46.6.1**, in the enterprise edition.
+This is a script written in Python that allows the exploitation of the **Metabase's** software security flaw described in **CVE-2023-38646.** The system is vulnerable in versions preceding **0.46.6.1**, in the open-source edition, and preceding **1.46.6.1**, in the enterprise edition.
 
 ## Usage
 
